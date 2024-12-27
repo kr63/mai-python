@@ -1,0 +1,30 @@
+{
+  "priority": 5,
+  "request": {
+    "method": "POST",
+    "url": "/api/v1/menu/search",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "region_id": 1,
+          "place_slug": "perekrestok",
+          "text": "${json-unit.any-string}",
+          "location": {
+            "lat": 55.7106035,
+            "lon": 37.743341
+          }
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "yandex_eda_200.json",
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

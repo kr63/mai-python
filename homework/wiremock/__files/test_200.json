@@ -1,0 +1,4 @@
+{
+  "user": "User1",
+  "text": "{{jsonPath request.body '$.text'}}"
+}

@@ -1,0 +1,21 @@
+###
+POST http://localhost:8080/api/v1/menu/search
+Content-Type: application/json
+
+{
+  "region_id": 1,
+  "place_slug": "perekrestok",
+  "text": "молоко кошачье",
+  "location": {
+    "lat": 55.7106035,
+    "lon": 37.743341
+  }
+}
+
+###
+POST http://localhost:8080/api/info
+Content-Type: application/json
+
+{
+  "text": "молоко123 ---asdf"
+}

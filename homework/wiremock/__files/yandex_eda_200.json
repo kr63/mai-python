@@ -1,0 +1,129 @@
+{
+  "blocks": [
+    {
+      "title": "Товары",
+      "type": "categories_products",
+      "payload": {
+        "products": [
+          {
+            "id": -17430930535,
+            "uid": "e65bdaf0-7c34-408f-9e28-48e2c7321402",
+            "public_id": "{{randomValue type='UUID'}}",
+            "name": "{{jsonPath request.body '$.text'}}",
+            "description": "",
+            "available": true,
+            "inStock": 154,
+            "price": 90,
+            "decimalPrice": "90.00",
+            "promoPrice": 80,
+            "decimalPromoPrice": "80.00",
+            "promoTypes": [
+              {
+                "id": 25,
+                "name": "Скидка для магазинов.",
+                "pictureUri": "https://avatars.mds.yandex.net/get-eda/1370147/5b73e9ea19587/80x80",
+                "text": "–11%",
+                "badgeColor": [
+                  {
+                    "theme": "light",
+                    "value": "#FA6A3C"
+                  },
+                  {
+                    "theme": "dark",
+                    "value": "#FA6A3C"
+                  }
+                ],
+                "textColor": [
+                  {
+                    "theme": "light",
+                    "value": "#FFFFFF"
+                  },
+                  {
+                    "theme": "dark",
+                    "value": "#FFFFFF"
+                  }
+                ],
+                "type": "price_discount"
+              }
+            ],
+            "optionGroups": [],
+            "picture": {
+              "url": "https://avatars.mds.yandex.net/get-eda/12773219/26b3fa37c03256b5c74eb1e4b0b9426b/{w}x{h}",
+              "scale": "aspect_fit"
+            },
+            "weight": "925 мл",
+            "adult": false,
+            "shippingType": "all",
+            "promoted": {
+              "source": "advert"
+            }
+          }
+        ],
+        "categories": [
+          {
+            "id": "2910",
+            "title": "Молоко, яйца",
+            "products_ids": [
+              "e65bdaf0-7c34-408f-9e28-48e2c7321402",
+              "8a167de7-3991-478c-aa0b-71123067ffdc"
+            ]
+          },
+          {
+            "id": "111504",
+            "title": "Питание",
+            "products_ids": [
+              "18c11c49-462c-4a80-ac31-cf103cd4d2f7",
+              "1dce33a9-257b-47f9-ab9a-aa21882517a4"
+            ]
+          },
+          {
+            "id": "220372",
+            "title": "Без молока",
+            "products_ids": [
+              "ee7e03cd-f6e9-43e4-b180-dbd74fa66c2f",
+              "10a00d17-4d11-4dc1-8c04-15cc8be40acb"
+            ]
+          },
+          {
+            "id": "241010",
+            "title": "Только в «Перекрёстке»",
+            "products_ids": [
+              "7c2f03fe-c071-4cb7-96d2-4dfa93deef60",
+              "64b1c95e-5338-47ec-8036-3fb46920d553"
+            ]
+          }
+        ],
+        "filters": [],
+        "all_categories_text": "Все"
+      }
+    }
+  ],
+  "currency": {
+    "code": "RUB",
+    "sign": "₽",
+    "template": "",
+    "text": ""
+  },
+  "sorts": {
+    "available": [
+      {
+        "slug": "by_popularity",
+        "title_in_list": "Популярные",
+        "title_applied": "Сначала популярные"
+      },
+      {
+        "slug": "price_asc",
+        "title_in_list": "Дешёвые",
+        "title_applied": "Сначала дешёвые"
+      },
+      {
+        "slug": "price_desc",
+        "title_in_list": "Дорогие",
+        "title_applied": "Сначала дорогие"
+      }
+    ],
+    "applied": "by_popularity",
+    "default": "by_popularity",
+    "position": "before_filters"
+  }
+}

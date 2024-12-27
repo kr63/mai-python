@@ -1,0 +1,25 @@
+{
+  "priority": 20,
+  "request": {
+    "method": "POST",
+    "url": "/api/info",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "text": "${json-unit.any-string}"
+        },
+        "ignoreExtraElements": true
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "test_200.json",
+    "transformers": [
+      "response-template"
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
