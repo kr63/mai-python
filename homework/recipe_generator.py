@@ -5,7 +5,7 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_gigachat.chat_models import GigaChat
 
-from homework.model import Recipe
+from model import Recipe
 
 load_dotenv()
 my_credentials = os.getenv('MY_CREDENTIALS')

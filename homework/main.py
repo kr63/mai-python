@@ -1,5 +1,6 @@
 import argparse
 
+from markdown_generator import generate_markdown
 from recipe_generator import generate_recipe
 from yandex_eda import search_yandex_eda
 
@@ -16,27 +17,18 @@ def get_yandex_id(ingredients):
         result[item['name']] = response['public_id']
     return result
 
-def run(meal: str):
+def run(meal: str, filename: str):
     result = generate_recipe(meal)
     public_ids = get_yandex_id(result['ingredients'])
-    return result
+    return generate_markdown(result, public_ids, filename)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Генератор рецептов')
     parser.add_argument('-m', '--meal', type=str,
                         help='Название блюда', default='борщ')
+    parser.add_argument('-o', '--out', type=str,
+                        help='Итоговый файл', default='recipe.md')
     args = parser.parse_args()
-    # print(args.meal)
-    run(args.meal)
-
-    # result = generate_recipe(args.meal)
-    #
-    # print(f'title: {result['title']}')
-    # print(f'title: {result['description']}')
-    # for item in result['instructions']:
-    #     print(item)
-    # for item in result['ingredients']:
-    #     print(item['name'], item['amount'])
-
-'https://eda.yandex.ru/retail/perekrestok?item=[public_id].'
+    md = run(args.meal, args.out)
+    md.create_md_file()
