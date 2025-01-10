@@ -1,0 +1,16 @@
+{
+  "priority": 500,
+  "request": {
+    "method": "GET",
+    "url": "/api/image"
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 2000,
+    "bodyFileName": "image.jpeg",
+    "headers": {
+      "Content-Type": "image/jpeg",
+      "Content-Disposition": "attachment;filename=\"image.jpeg\""
+    }
+  }
+}
